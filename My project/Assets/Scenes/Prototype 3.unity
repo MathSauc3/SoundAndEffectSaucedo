@@ -489,6 +489,9 @@ MonoBehaviour:
   dirtParticle: {fileID: 963058838}
   jumpSound: {fileID: 8300000, guid: 113ee460fadc340e4957a7404a9fbb27, type: 3}
   crashSound: {fileID: 8300000, guid: 913d6445ee8cc4152a9c18da590ee203, type: 3}
+  doubleJumpUsed: 0
+  doubleJumpForce: 3
+  doubleSpeed: 0
 --- !u!65 &758842127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5359,6 +5362,51 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &1201764829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1201764831}
+  - component: {fileID: 1201764830}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1201764830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201764829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 568d9bde9deb4ab45937c381a0c69d12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+--- !u!4 &1201764831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201764829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.3888779, y: 0.46688238, z: -7.9119554}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1363992521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5550,7 +5598,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97e83cfd2cc012c488f5151b0dd1c246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 2835323677898624275, guid: 3fa08a83f0d81c64a93f6e583877570d, type: 3}
+  obstaclePrefab:
+  - {fileID: 7790963773599789729, guid: ef6da62d87cc2f64387f394a6ae0b67f, type: 3}
+  - {fileID: 2835323677898624275, guid: 3fa08a83f0d81c64a93f6e583877570d, type: 3}
+  - {fileID: 2600837142314614424, guid: b9ba574ee184a8145a9b120bf6cb8450, type: 3}
 --- !u!4 &1960086878
 Transform:
   m_ObjectHideFlags: 0
